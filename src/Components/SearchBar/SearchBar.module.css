@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "PumpOpti";
+    src: url(../../../assets/PumpOpti-DemiBold.otf);
+  }
+
+.container{
+margin-top: 2em;
+margin-right: 4em;
+
+
+}
+
+.input{
+border-radius: 10px;
+position: relative;
+font-family: "PumpOpti";
+font-size: larger;
+border-radius: 20px;
+outline: none;
+  border: 2px solid #0d0d0d;
+  background-color: rgb(250, 240, 222) ;
+  box-shadow: 0 0 0 4px rgb(220, 243, 247), 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: .1s ease-in-out, .4s color;
+  z-index: 0;
+}
+
+
+
+.button{
+  font-family: "PumpOpti";
+  font-size: larger;
+  color: rgb(250, 240, 222);
+  margin-left: -20px;
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid rgb(250, 240, 222);
+  background-color: #4A6F73;
+  box-shadow: 0 0 0 4px rgb(220, 243, 247), 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: 0.1s ease-in-out, 0.4s color;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}

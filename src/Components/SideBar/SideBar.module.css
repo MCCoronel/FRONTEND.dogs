@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "Roundo";
+    src: url(../../../assets/Roundo.ttf);
+  }
+  @font-face {
+    font-family: "PumpOpti";
+    src: url(../../../assets/PumpOpti-DemiBold.otf);
+  }@font-face {
+    font-family: "Nick";
+    src: url(../../../assets/MUNDONICK.ttf);
+  }@font-face {
+    font-family: "insanibu";
+    src: url(../../../assets/Insanibu.ttf);
+  }@font-face {
+    font-family: "Capri";
+    src: url(../../../assets/CapricaScriptPersonalUse.ttf);
+  }
+  @font-face {
+    font-family: "Bold";
+    src: url(../../../assets/bold_pw.ttf);
+  }
+
+.containerFilters{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.label{
+    font-family: "PumpOpti";
+    font-size: 20px;
+
+}
+
+.option{
+    font-family: "PumpOpti";
+    border-radius: 10px;
+    background-color: rgba(142, 230, 246, 0.505);
+    cursor: pointer;
+}
+
+.buttonReset{  
+    font-family: "PumpOpti"; 
+    color: azure;
+    outline: none;
+    padding: 0.5em;
+    border: 2px solid #1595cb;
+    border-radius: 15px;
+    background-color: rgb(49, 49, 49);
+    box-shadow: 0 0 0 4px rgb(220, 243, 247), 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    transition: .1s ease-in-out, .4s color;
+    cursor: pointer;
+}
+
+.buttonReset:hover{
+    background-color: #7ddcf9b0;
+    color:rgb(49, 49, 49); ;
+}
+
+.filter{
+  width: 4em;
+  height: 4em;
+  cursor: pointer;
+}
