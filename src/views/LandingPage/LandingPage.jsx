@@ -27,7 +27,7 @@ const LandingPage = () => {
                 </NavLink>
                 <NavLink to="/create" className={style.navlink}>
               <button className={style.button}>
-                  Add breed
+                  Add breedfggh
               </button>
                 </NavLink>
             </div>
