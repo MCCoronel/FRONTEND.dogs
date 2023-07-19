@@ -1,23 +1,7 @@
-@font-face {
-  font-family: "Roundo";
-  src: url(../../../assets/Roundo.ttf);
-}
+
 @font-face {
   font-family: "PumpOpti";
   src: url(../../../assets/PumpOpti-DemiBold.otf);
-}@font-face {
-  font-family: "Nick";
-  src: url(../../../assets/MUNDONICK.ttf);
-}@font-face {
-  font-family: "insanibu";
-  src: url(../../../assets/Insanibu.ttf);
-}@font-face {
-  font-family: "Capri";
-  src: url(../../../assets/CapricaScriptPersonalUse.ttf);
-}
-@font-face {
-  font-family: "Bold";
-  src: url(../../../assets/bold_pw.ttf);
 }
 
 
@@ -40,7 +24,10 @@
 }
 
 .heading {
-  font-family: "insanibu";
+  font-family:"PumpOpti";
+  border-bottom: 2px solid white;
+  padding-bottom: 0.7em;
+  width: 100%;
   color: #2b2b2ade;
   background-color: transparent;
   letter-spacing: .5em;
@@ -141,7 +128,8 @@
 
 .option{
   font-family: "PumpOpti";
-  
+
+  border-radius: 10px;
 }
 
 .selectedTemp{
@@ -158,6 +146,7 @@
   padding:0.5em;
   margin: 0.5em;
   box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .selectedTemp:hover{
@@ -186,7 +175,7 @@
   }
 
   .errors{
-    font-size: 10px;
+    font-size: 15px;
         color: red;
   }
 

@@ -4,7 +4,6 @@
   }
 
 .container{
-margin-top: 2em;
 margin-right: 4em;
 
 
@@ -40,4 +39,13 @@ outline: none;
   position: relative;
   z-index: 2;
   cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+.container{
+margin-right: 1em;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+}
 }

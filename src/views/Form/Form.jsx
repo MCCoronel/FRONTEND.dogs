@@ -8,14 +8,16 @@ import formImage from "../../../assets/formImage.png";
 import formImgCheck from "../../../assets/check.png";
 
 const Form = () => {
-  const allTemperaments = useSelector((state) => state.temperaments);
-
   const dispatch = useDispatch();
+
+  //ESTADOS GLOBALES
+  const allTemperaments = useSelector((state) => state.temperaments);
 
   useEffect(() => {
     dispatch(getTemperaments());
   }, [dispatch]);
 
+  // ESTADOS LOCALES
   const [form, setForm] = useState({
     name: "",
     image: "",
@@ -35,6 +37,7 @@ const Form = () => {
 
   const [alertTimeout, setAlertTimeout] = useState(null); // Estado para ocultar la alerta
 
+  //HANDLERS
   const changeHandler = (event) => {
     //El mismo estado que estoy por setear se lo doy a Validate tambien, ya que la validacion se realiza mas rapido que el cambio de estado, de esta forma le llega lo mismo a los dos
     const newState = { ...form };
@@ -80,6 +83,13 @@ const Form = () => {
 
   const selectHandler = (event) => {
     console.log(event.target.value);
+
+    // const defaultValue = "Select one or more typical temperaments of the breed"
+
+    // if(event.target.name === "temperaments" && event.target.value === defaultValue){
+    //   return setErrors(validate(form));
+    // }
+
     if (
       event.target.value &&
       !form.temperaments.some((temp) => temp.name === event.target.value)
@@ -93,29 +103,23 @@ const Form = () => {
         ...newState.temperaments,
         { id: selectedTemperamentID, name: selectedTemperamentName },
       ];
-      setErrors(
-        validate(newState)
-      );
- setForm(newState);
-      // setForm((prevForm) => ({
-      //    ...prevForm,
-      //    temperaments: {id: selectedTemperamentID, name: selectedTemperamentName},
-      // }));
+      setErrors(validate(newState));
+      setForm(newState);
     }
   };
 
   const deleteTemperament = (temperament) => {
-
-    //const newState = { ...form };
-
-    // setErrors(
-    //   validate({newState, temperaments:[newState.temperaments]})
-    // );
-
+    let newTemps = form.temperaments.filter((temp) => temp !== temperament);
     setForm({
       ...form,
-      temperaments: form.temperaments.filter((temp) => temp !== temperament),
+      temperaments: newTemps,
     });
+    setErrors(
+      validate({
+        ...form,
+        temperaments: newTemps,
+      })
+    );
   };
 
   useEffect(() => {
@@ -278,10 +282,16 @@ const Form = () => {
 
           <div>
             <label>Temperaments: </label>
-            <select name="temperaments" onChange={selectHandler}>
-              {/* <option>Select one or more typical temperaments of the breed</option> */}
+            <select
+              name="temperaments"
+              onChange={selectHandler}
+              defaultValue="Select one or more typical temperaments of the breed"
+              className={style.option}
+            >
+              <option className={style.option}>
+                Select one or more typical temperaments of the breed
+              </option>
               {allTemperaments?.map((temperament) => (
-                
                 <option
                   key={temperament.id}
                   id={temperament.id}

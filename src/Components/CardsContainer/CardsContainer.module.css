@@ -29,6 +29,7 @@
     background-color: transparent;
     box-shadow: 0 0 0 4px rgb(220, 243, 247), 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
     transition: .1s ease-in-out, .4s color;
+    cursor: pointer;
   }
   
   .button:hover {

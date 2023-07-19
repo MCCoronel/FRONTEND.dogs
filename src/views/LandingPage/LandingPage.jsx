@@ -1,9 +1,7 @@
 import style from "./LandingPage.module.css";
 import { NavLink } from "react-router-dom";
 import imageDos from "../../../assets/8634007.png";
-// import videDog1 from "../../../assets/videoDog1.mp4";
-// import videDog2 from "../../../assets/videoDogs2.mp4";
-// import videDog3 from "../../../assets/videoDog3.mp4";
+
 const LandingPage = () => {
   return (
     <div className={style.container}>
@@ -12,12 +10,7 @@ const LandingPage = () => {
           <div>
             <h1 className={style.tittle}>Oh my dog!</h1>
             <p className={style.p}>
-              ¡Bienvenido a Oh my Dog!Aquí encontrarás una amplia selección de
-              razas para que puedas encontrar el compañero perfecto para ti y tu
-              familia.Además, cada raza viene con sus detalles y características
-              para que puedas tomar la mejor decisión al elegir a tu nuevo amigo
-              peludo. ¡Explora nuestra selección y encuentra al perro de tus
-              sueños!
+            Welcome to Oh my Dog!Here you will find a wide selection of breeds so that you can find the perfect companion for you and your family.In addition, each breed comes with its details and characteristics so that you can make the best decision when choosing your new friend furry. Explore our selection and find the dog of your dreams!
             </p>
             <div className={style.buttonContainer}>
                 <NavLink to="/home" className={style.navlink}>
@@ -27,7 +20,7 @@ const LandingPage = () => {
                 </NavLink>
                 <NavLink to="/create" className={style.navlink}>
               <button className={style.button}>
-                  Add breedfggh
+                  Add breed
               </button>
                 </NavLink>
             </div>

@@ -7,6 +7,7 @@ import {
   filterAndOrder,
   paginatedBreeds,
 } from "../../redux/actions";
+import SearchBar from "../SearchBar/SearchBar";
 import imgfilter from "../../../assets/filter.png";
 
 const SideBar = () => {
@@ -169,7 +170,7 @@ const SideBar = () => {
        <img src={imgfilter} alt="filter" className={style.filter} onClick={toggle}/>
       {!show.filter && (
       <div className={style.containerFilters}>
-      <div>
+      <div className={style.containerFilter}>
         <label className={style.label}>Temperaments: </label>
         <select
           name="temperaments"
@@ -194,7 +195,7 @@ const SideBar = () => {
         </select>
       </div>
 
-      <div>
+      <div className={style.containerFilter}>
         <label className={style.label}>Creation time: </label>
         <select
           name="origin"
@@ -212,7 +213,7 @@ const SideBar = () => {
         </select>
       </div>
 
-      <div>
+      <div className={style.containerFilter}>
         <label className={style.label}>Order:</label>
         <select name="order" value={filter.order} onChange={orderHandler} className={style.option}>
           <option name="LowToHigh" value="LowToHigh" className={style.option}>
@@ -235,7 +236,15 @@ const SideBar = () => {
 
 
       <button onClick={resetFiltersHandler} className={style.buttonReset}>Reset Filters</button>
-    </div>)}
+
+      <div>
+        <SearchBar />
+        </div>
+
+    </div>
+    
+    
+    )}
     </div>
   );
 };

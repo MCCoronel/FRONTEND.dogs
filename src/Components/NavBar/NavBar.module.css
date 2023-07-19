@@ -1,7 +1,6 @@
 .container{
     display: flex;
     flex-direction: row;
-    width: 20%;
     justify-content:flex-end;
     background: linear-gradient(145deg, #f0f0f0, #cacaca);
     box-shadow:  6px 6px 12px #a1a1a1,
@@ -9,13 +8,17 @@
     background-image: url(../../../assets/navbar1.png);
     background-size: cover;
     height: 200%;
-    width: 203vh;
+    width: 205vh;
     padding-bottom: 10%;
 }
 
 @font-face {
   font-family: "PumpOpti";
   src: url(../../../assets/PumpOpti-DemiBold.otf);
+}
+
+.containerButtons{
+  margin-top: 1.5em;
 }
 
 .button{
@@ -26,5 +29,36 @@ padding: 1em;
 font-size: 1.5em;
 margin-left: 1em;
 margin-right: 1em;
+margin-top: 5em;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .container{
+  justify-content:left;
+  box-shadow:  6px 6px 12px #a1a1a1,
+  -6px -6px 12px #ffffff;
+  background-image: url(../../../assets/navBarResponsive.png);
+  background-size: cover;
+  }
+
+  .containerButtons {
+    margin-top: 2em;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .button{
+  font-family: "PumpOpti";
+  color: azure;
+  border-bottom: 2px solid;
+  font-size: 1em;
+  
+  }
+
+
 }
 
