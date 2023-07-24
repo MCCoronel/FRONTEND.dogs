@@ -1,5 +1,5 @@
 //import React from "react";
-import { LandingPage, Home, Detail, Form } from "./views";
+import { LandingPage, Home, Detail, Form , ErrorPage} from "./views";
 import { NavBar } from "./Components";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,16 +17,19 @@ function App() {
   }, []);
 
   const location = useLocation();
+  const showNavBar = /^\/(home|dogs\/[\w-]+|create)$/.test(location.pathname);
+
 
   
   return (
     <div>
-      {location.pathname !== "/" && <NavBar />}
+      {showNavBar && <NavBar />}
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/dogs/:id" element={<Detail />} />
         <Route path="/create" element={<Form />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );

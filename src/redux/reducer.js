@@ -13,7 +13,7 @@ import { filterAndOrder, paginatedbreeds } from "./Helpers/Helpers";
 const initialState = {
   breeds: [],
   breedsFilteredAndOrdered: [],
-  temperaments: [], 
+  temperaments: [],
   Page: 1,
 };
 

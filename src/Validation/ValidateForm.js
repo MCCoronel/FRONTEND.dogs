@@ -78,14 +78,14 @@ const validate = (form) => {
 
   // MAX LIFE SPAN
   errors.maxLifeSpan = !parseInt(form.maxLifeSpan)
-    ? "Max life span is required"
-    : !regexNumber.test(form.maxLifeSpan)
-    ? "The Life span must be a number"
-    : parseInt(form.maxLifeSpan) <= 0 || parseInt(form.minLifeSpan)>= parseInt(form.maxLifeSpan)
-    ? "The maximum life span cannot be less than 0 or less than the minimum life span"
-    : parseInt(form.minLifeSpan) > 20
-    ? "The life span cannot exceed 20 years"
-    : "";
+  ? "Max life span is required"
+  : !regexNumber.test(form.maxLifeSpan)
+  ? "The Life span must be a number"
+  : parseInt(form.maxLifeSpan) <= 0 || parseInt(form.maxLifeSpan) <= parseInt(form.minLifeSpan)
+  ? "The maximum life span cannot be less than 0 or less than the minimum life span"
+  : parseInt(form.maxLifeSpan) > 20
+  ? "The life span cannot exceed 20 years"
+  : "";
 
   //BREED GROUP
   errors.breed_group = !regexName.test(form.breed_group)

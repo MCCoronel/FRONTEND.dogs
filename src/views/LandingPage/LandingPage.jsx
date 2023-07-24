@@ -10,7 +10,11 @@ const LandingPage = () => {
           <div>
             <h1 className={style.tittle}>Oh my dog!</h1>
             <p className={style.p}>
-            Welcome to Oh my Dog!Here you will find a wide selection of breeds so that you can find the perfect companion for you and your family.In addition, each breed comes with its details and characteristics so that you can make the best decision when choosing your new friend furry. Explore our selection and find the dog of your dreams!
+            ¡Bienvenido a Oh my Dog! Si eres amante de los perros, este es el lugar perfecto para ti. Aquí encontrarás una amplia selección de razas para que puedas encontrar el compañero perfecto para ti y tu familia. Además, cada raza viene con sus detalles y características para que puedas tomar la mejor decisión al elegir a tu nuevo amigo peludo.
+
+Pero eso no es todo, también te damos la oportunidad de compartir a tu perro favorito con otros amantes de los caninos. Puedes subir fotos y detalles de tu adorable compañero para que todos puedan ver lo especial que es. ¡Comparte la felicidad y el cariño que tu perro brinda al mundo!
+
+Explora nuestra selección de razas y comparte la alegría de tener un perro en tu vida. ¡Oh my Dog te da la bienvenida a esta comunidad llena de amor por los perros!
             </p>
             <div className={style.buttonContainer}>
                 <NavLink to="/home" className={style.navlink}>
@@ -20,7 +24,7 @@ const LandingPage = () => {
                 </NavLink>
                 <NavLink to="/create" className={style.navlink}>
               <button className={style.button}>
-                  Add breed
+                  Add your dog
               </button>
                 </NavLink>
             </div>

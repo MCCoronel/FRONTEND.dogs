@@ -33,10 +33,8 @@ export const getBreedByName = (name) => {
       const fromAPI = await axios.get(endpoint);
       const breed = fromAPI.data;
       dispatch({ type: GET_BREEDS_BY_NAME, payload: breed });
-
     } catch (error) {
-      window.alert(error.response.data.error)
-     
+      window.alert(error.response.data.error);
     }
   };
 };

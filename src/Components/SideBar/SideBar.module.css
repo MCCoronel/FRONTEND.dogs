@@ -34,6 +34,7 @@
 
 .option{
     font-family: "PumpOpti";
+    font-size: 20px;
     border-radius: 10px;
     background-color: rgba(142, 230, 246, 0.505);
     cursor: pointer;

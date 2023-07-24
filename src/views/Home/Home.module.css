@@ -1,4 +1,29 @@
+@font-face {
+   font-family: "PumpOpti";
+   src: url(../../../assets/PumpOpti-DemiBold.otf);
+ }
+
 .containerHome{
-    
-   background-color: #acdcee5f ;
+   background-color: #acdcee5f;
+  min-height: 100vh; /* Asegura que el contenido llegue al fondo de la página */
+  display: flex;
+  flex-direction: column;
 }
+
+.footer {
+   font-family:monospace;
+   font-size: 2em;
+   background-color: #4b5a5d;
+   color: white;
+   padding: 5px;
+   text-align: center;
+   /* Asegura que el footer se fije al final de la página */
+   margin-top: 2em;
+
+ }
+
+ .imageCheck{
+   width: 1.5em;
+   height: 1.5em;
+   margin-left: 0.5em;
+ }

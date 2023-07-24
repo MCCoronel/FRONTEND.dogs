@@ -19,7 +19,7 @@ export function orderWeight(breeds, order) {
     return breeds
       ?.filter((breed) => breed.minWeight !== null)
       .sort((a, b) => b.minWeight - a.minWeight);
-      
+
   return breeds;
 }
 
@@ -88,7 +88,6 @@ export function filterAndOrder(breeds, configs) {
         }
         break;
 
-     
       default:
         break;
     }
@@ -97,16 +96,14 @@ export function filterAndOrder(breeds, configs) {
   return listFilteredAndOrdered;
 }
 
-export function paginatedbreeds(Page, value){
-  if(value === "next"){
+export function paginatedbreeds(Page, value) {
+  if (value === "next") {
     return Page + 1;
   }
-  if(value === "prev"){
-    return Page - 1;    
+  if (value === "prev") {
+    return Page - 1;
   }
 
   Page = 1;
-  return Page;  
+  return Page;
 }
-
-

@@ -11,14 +11,14 @@ const Card = (props) => {
         </Link>
       </div>
       <Link to={`/dogs/${props.id}`}>
-      <div className={style.name}>
-        <h1>{props.name}</h1>
-      </div>
+        <div className={style.name}>
+          <h1>{props.name}</h1>
+        </div>
       </Link>
       <Link to={`/dogs/${props.id}`}>
-      <p className={style.weight}>
-        Weight : {props.minWeight} - {props.maxWeight} kg
-      </p>
+        <p className={style.weight}>
+          Weight : {props.minWeight} - {props.maxWeight} kg
+        </p>
       </Link>
       <div className={style.info}>
         <p>
@@ -29,7 +29,7 @@ const Card = (props) => {
         </p>
       </div>
       <Link to={`/dogs/${props.id}`}>
-      <button className={style.cardButton}>More info</button>
+        <button className={style.cardButton}>More info</button>
       </Link>
     </div>
   );

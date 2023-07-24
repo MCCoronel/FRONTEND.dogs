@@ -6,14 +6,13 @@ import { useEffect } from "react";
 //import { useState } from "react";
 
 const CardsContainer = () => {
-
   const dispatch = useDispatch();
   const breeds = useSelector((state) => state.breedsFilteredAndOrdered);
   const Page = useSelector((state) => state.Page);
 
   useEffect(() => {
-    !(breeds.length) && dispatch(paginatedBreeds(Page));
-  },[breeds.length, dispatch, Page]);
+    !breeds.length && dispatch(paginatedBreeds(Page));
+  }, [breeds.length, dispatch, Page]);
 
   const handleNextPage = (event) => {
     const next = event.target.value;
@@ -33,7 +32,6 @@ const CardsContainer = () => {
 
   return (
     <div>
-
       <div className={style.buttonContainer}>
         <button
           onClick={handlePrevPage}
@@ -44,7 +42,9 @@ const CardsContainer = () => {
           Previous
         </button>
 
-        <div className={style.page}>{Page}</div>
+        <div className={style.page}>
+          {Page} - {totalPages}
+        </div>
 
         <button
           onClick={handleNextPage}
