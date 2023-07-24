@@ -2,15 +2,11 @@
         display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap:initial;
 }
 
 .container1{
         font-family: "PumpOpti";
         display: flex;
-        flex-wrap: wrap;
-        gap:initial;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -55,7 +51,7 @@
         width: 3em;
         height:3em;
         cursor: pointer;
-        margin-left: -20em;
+        margin-left: -15em;
 }
 
 .arrow:hover{
@@ -63,27 +59,10 @@
         height:3.4em;
 }
 
-@font-face {
-        font-family: "Roundo";
-        src: url(../../../assets/Roundo.ttf);
-      }
-      @font-face {
-        font-family: "PumpOpti";
-        src: url(../../../assets/PumpOpti-DemiBold.otf);
-      }@font-face {
-        font-family: "Nick";
-        src: url(../../../assets/MUNDONICK.ttf);
-      }@font-face {
-        font-family: "insanibu";
-        src: url(../../../assets/Insanibu.ttf);
-      }@font-face {
-        font-family: "Capri";
-        src: url(../../../assets/CapricaScriptPersonalUse.ttf);
-      }
-      @font-face {
-        font-family: "Bold";
-        src: url(../../../assets/bold_pw.ttf);
-      }
+ @font-face {
+ font-family: "PumpOpti";
+ src: url(../../../assets/PumpOpti-DemiBold.otf);
+}
 
 .name{
         font-family: "PumpOpti";
@@ -123,4 +102,76 @@
 .img{
         width: 1.2em;
         height: 1.2em;
+}
+
+@media screen and (max-width: 800px) {
+        .container1{
+                width: 95%;
+        }
+
+        .containerName{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-size: 10px
+        }
+        
+        .container2{
+                display: flex;        
+                flex-direction: column;
+                justify-content:center;
+                align-items: center;
+                margin: 0.5em;     
+                width: 95%;        
+        }
+        
+        .image{
+                width: 20em;
+                height:20em;
+        }
+        
+        .characteristic1{
+                font-family: "PumpOpti";
+                font-size: 1.5em;
+                background-color: #1594cbc1;
+                margin-top: 0em;
+                border-radius: 13px;
+                color: #262b2f;
+        }
+        
+        .characteristicContainer{
+                margin-top: 0.5em;
+        }
+        .characteristic{
+                font-family: "PumpOpti";
+                font-size: 25px;
+                margin-bottom: 0.2em;
+                margin-top: 0.5em;
+        }
+        
+        .infoContainer{
+                font-size: 19px;
+                margin-left: 0em;
+                width: 95%;
+                margin-top: 1em;
+        }
+        
+        .img{
+                width: 1.2em;
+                height: 1.2em;
+        }
+
+        .arrow{
+                width: 4em;
+                height:4em;
+                cursor: pointer;
+                margin-left: -15px;
+        }
+        
+        .arrow:hover{
+                width: 4.5em;
+                height:4.5em;
+        }
+       
 }

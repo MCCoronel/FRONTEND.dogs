@@ -1,15 +1,7 @@
 import style from "./NavBar.module.css";
 import { Link } from "react-router-dom";
-//import {getBreeds} from "../../redux/actions";
-import { useDispatch } from "react-redux";
-//import imageNavBar from "../../assets/navbar.png";
 
 const NavBar = () => {
-  // const dispatch = useDispatch();
-
-  // function handlerHome () {
-  //     dispatch(getBreeds());
-  // }
 
   return (
     <div className={style.container}>
@@ -25,6 +17,7 @@ const NavBar = () => {
         </Link>
       </div>
     </div>
+    
   );
 };
 

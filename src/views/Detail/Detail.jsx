@@ -7,7 +7,7 @@ import imageArrow from "../../../assets/goBack.png";
 import imgLP from "../../../assets/lifeSpan.png";
 import imgW from "../../../assets/weight.png";
 import imgH from "../../../assets/height.png";
-import imgTemp from  "../../../assets/temp.png";
+import imgTemp from "../../../assets/temp.png";
 import imgBG from "../../../assets/breedGroup.png";
 
 const Detail = () => {
@@ -59,32 +59,66 @@ const Detail = () => {
 
             <div className={style.characteristicContainer}>
               <p>
-                <div className={style.characteristic}><img src={imgH} alt="weight" className={style.img} /> Height: </div>
-                {breed.minHeight} - {breed.maxHeight} cm
+                <div className={style.characteristic}>
+                  <img src={imgH} alt="weight" className={style.img} /> Height:{" "}
+                </div>
+                {breed.minHeight && breed.maxHeight
+                  ? `${breed.minHeight} - ${breed.maxHeight} cm`
+                  : breed.minHeight
+                  ? `${breed.minHeight} cm`
+                  : breed.maxHeight
+                  ? `${breed.maxHeight} cm`
+                  : "N/A"}
               </p>
 
               <p>
-                <div className={style.characteristic}><img src={imgW} alt="weight" className={style.img} /> Weight:</div>
-                {breed.minWeight} - {breed.maxWeight} kg
+                <div className={style.characteristic}>
+                  <img src={imgW} alt="weight" className={style.img} /> Weight:
+                </div>
+                {breed.minWeight && breed.maxWeight
+                  ? `${breed.minWeight} - ${breed.maxWeight} kg`
+                  : breed.minWeight
+                  ? `${breed.minWeight} kg`
+                  : breed.maxWeight
+                  ? `${breed.maxWeight} kg`
+                  : "N/A"}
               </p>
 
               <p>
-                <div className={style.characteristic}><img src={imgLP} alt="weight" className={style.img} /> Life Span: </div>
-                {breed.minLifeSpan} - {breed.maxLifeSpan} years
+                <div className={style.characteristic}>
+                  <img src={imgLP} alt="weight" className={style.img} /> Life
+                  Span:{" "}
+                </div>
+                {breed.minLifeSpan && breed.maxLifeSpan
+                  ? `${breed.minLifeSpan} - ${breed.maxLifeSpan} years`
+                  : breed.minLifeSpan
+                  ? `${breed.minLifeSpan} years`
+                  : breed.maxLifeSpan
+                  ? `${breed.maxLifeSpan} years`
+                  : "N/A"}
               </p>
 
               <p>
-                <div className={style.characteristic}><img src={imgBG} alt="weight" className={style.img} /> Breed Group: </div>
-                {breed.breed_group}
+                <div className={style.characteristic}>
+                  <img src={imgBG} alt="weight" className={style.img} /> Breed
+                  Group:{" "}
+                </div>
+                {breed.breed_group ? `${breed.breed_group}` : "N/A"}
               </p>
               {breed.temperaments ? (
                 <p>
-                  <div className={style.characteristic}><img src={imgTemp} alt="weight" className={style.img} /> Temperaments: </div>
+                  <div className={style.characteristic}>
+                    <img src={imgTemp} alt="weight" className={style.img} />{" "}
+                    Temperaments:{" "}
+                  </div>
                   {breed.Temperament?.join(", ")}
                 </p>
               ) : (
                 <p>
-                  <div className={style.characteristic}><img src={imgTemp} alt="weight" className={style.img} /> Temperaments:</div>
+                  <div className={style.characteristic}>
+                    <img src={imgTemp} alt="weight" className={style.img} />{" "}
+                    Temperaments:
+                  </div>
                   {breed.Temperaments?.join(", ")}
                 </p>
               )}

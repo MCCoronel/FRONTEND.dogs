@@ -179,7 +179,7 @@ const SideBar = () => {
           onChange={handleChangeTemperamentFilter}
           className={style.option}
         >
-          <option value="Select one">Select one</option>
+          {/* <option value="Select one">Select one</option> */}
           <option name="all" value="all" className={style.option}>
             All
           </option>
