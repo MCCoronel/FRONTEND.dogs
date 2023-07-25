@@ -301,7 +301,7 @@ const Form = () => {
               className={style.option}
             >
               <option className={style.option}>
-                Select one or more typical temperaments of the breed
+                Select one or more typical temperaments
               </option>
               {allTemperaments?.map((temperament) => (
                 <option

@@ -71,7 +71,7 @@
   padding: 0.5em;
   border: 1px solid #11101077;
   color: #111010a1;
-  width: 14em;
+  width: 20em;
   height: 3em;
   border-radius: 10px;
   background-color: rgba(253, 255, 255, 0.698);
@@ -135,6 +135,7 @@
 
 .selectedTemp{
  font-family: "PumpOpti";
+ font-size: medium;
  align-self: center;
   border-radius: 10px;
   outline: none;
@@ -187,25 +188,15 @@
 
  /*--------------------------------------------------------------------------------------------*/ 
  
-@media screen and (max-width: 768px) {
-    
+@media screen and (width <= 1650px) {  
 
-.container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  background-color: #acdcee5f ;;
-}
 
 .formContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  flex-direction: column;  
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
 }
 
 .heading {
@@ -223,7 +214,7 @@
 .form{
   font-family:"PumpOpti"; 
   font-size: 20px;
-  width: 70%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -246,21 +237,11 @@
 
 .range{
   display: flex;
-  flex-direction: row;
-  gap: 2em;  
+  flex-direction: column; 
 }
 
-.input {
-  font-family:'critter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  outline: none;
-  padding: 0.5em;
-  border: 1px solid #11101077;
-  color: #111010a1;
-  width: 14em;
-  height: 3em;
-  border-radius: 10px;
-  background-color: rgba(253, 255, 255, 0.698);
-  text-align: center;
+.input { 
+  width: 20em;  
 }
 
 .imageContainer {
@@ -276,68 +257,11 @@
   height: 500px;
 }
 
-.button {
-  align-self: center;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  color: white;
-  background-color: #121212d9;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  transition: .4s ease-in-out opacity,.1s ease-in-out active;
-  padding-left: 7em;
-  padding-right: 7em;
-  padding-bottom: 1em;
-  padding-top: 1em;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-
-.button:hover {
-  background-color: #51cff9d9;
-  color: #423f3d;
-  opacity: 0.8;
-  box-shadow: 0.5px 0.5px 1px 1px rgba(0, 0, 0, 0.5);
-}
-
-.button:active {
-  transform: translateX(0.1em) translateY(0.1em);
-  box-shadow: none;
-  background-color: #5288f4b3;
-}
-
-.button:disabled{
-  background-color: #423f3d9f;
-}
-
-.option{
-  font-family: "PumpOpti";
-
-  border-radius: 10px;
-}
 
 .selectedTemp{
- font-family: "PumpOpti";
- align-self: center;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  color: white;
-  background-color: #121212d9;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  transition: .4s ease-in-out opacity,.1s ease-in-out active;
-  padding:0.5em;
-  margin: 0.5em;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+ font-size: medium;
 }
 
-.selectedTemp:hover{
-  background-color: #f22525d9;
-}
 
 .alert {
     padding: 2px;
@@ -365,7 +289,4 @@
         color: red;
   }
 
-  .option{
-    color: black;
-  }
   }

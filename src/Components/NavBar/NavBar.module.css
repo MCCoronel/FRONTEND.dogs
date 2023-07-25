@@ -34,7 +34,7 @@ margin-top: 5em;
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (width<= 600px) {
   .container{
   justify-content:left;
   box-shadow:  6px 6px 12px #a1a1a1,
@@ -69,8 +69,24 @@ margin-top: 5em;
     background-image: url(../../../assets/navbar1.png);
     background-size: cover;
     height: 200%;
-    width: 160vh;
+    width: 203vh;
     padding-bottom: 10%;
   }
 }
+
+ @media screen and (width: 1280px) {
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  6px 6px 12px #a1a1a1,
+    -6px -6px 12px #ffffff;
+    background-image: url(../../../assets/navbar1.png);
+    background-size: cover;
+    height: 200%;
+    width: 160vh;
+    padding-bottom: 10%;
+  }
+} 
 

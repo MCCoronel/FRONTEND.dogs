@@ -9,9 +9,16 @@ import imgW from "../../../assets/weight.png";
 import imgH from "../../../assets/height.png";
 import imgTemp from "../../../assets/temp.png";
 import imgBG from "../../../assets/breedGroup.png";
+import ReactLoading from "react-loading"; 
 
 const Detail = () => {
   const { id } = useParams();
+  
+  const navigate = useNavigate();
+
+  const [breed, setBreed] = useState({});
+
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const endpoint = `http://localhost:3001/dogs/${id}`;
@@ -27,13 +34,11 @@ const Detail = () => {
       .catch((error) => {
         console.log(error.message);
         window.alert("Error getting breed data");
+      })
+      .finally(() => {
+        setLoading(false); // Finalmente, independientemente de si hubo éxito o error, establece loading en false
       });
   }, [id]);
-
-  const [breed, setBreed] = useState({});
-
-  const navigate = useNavigate();
-  console.log(navigate);
 
   function handleClick() {
     navigate(-1);
@@ -50,9 +55,14 @@ const Detail = () => {
         </div>
 
         <div className={style.container2}>
-          <div className={style.imageContainer}>
-            <img src={breed.image} alt="Dog" className={style.image} />
-          </div>
+        <div className={style.imageContainer}>
+        {/* Mostrar el componente de carga mientras loading es true */}
+        {loading ? (
+          <ReactLoading type={"spin"} color={"#1594cbc1"} height={50} width={50} />
+        ) : (
+          <img src={breed.image} alt="Dog" className={style.image} />
+        )}
+      </div>
 
           <div className={style.infoContainer}>
             <h2 className={style.characteristic1}>Breed characteristics</h2>

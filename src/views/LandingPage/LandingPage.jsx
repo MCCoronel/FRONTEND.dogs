@@ -10,23 +10,27 @@ const LandingPage = () => {
           <div>
             <h1 className={style.tittle}>Oh my dog!</h1>
             <p className={style.p}>
-            ¡Bienvenido a Oh my Dog! Si eres amante de los perros, este es el lugar perfecto para ti. Aquí encontrarás una amplia selección de razas para que puedas encontrar el compañero perfecto para ti y tu familia. Además, cada raza viene con sus detalles y características para que puedas tomar la mejor decisión al elegir a tu nuevo amigo peludo.
-
-Pero eso no es todo, también te damos la oportunidad de compartir a tu perro favorito con otros amantes de los caninos. Puedes subir fotos y detalles de tu adorable compañero para que todos puedan ver lo especial que es. ¡Comparte la felicidad y el cariño que tu perro brinda al mundo!
-
-Explora nuestra selección de razas y comparte la alegría de tener un perro en tu vida. ¡Oh my Dog te da la bienvenida a esta comunidad llena de amor por los perros!
+              Welcome to Oh my Dog! If you are a dog lover, this is the perfect
+              perfect place for you. Here you will find a wide selection of
+              breeds so you can find the perfect companion for you and your
+              family. family. In addition, each breed comes with its details and
+              characteristics so you can make the best decision when choosing
+              your new furry friend. your new furry friend. But that is not all,
+              we also give you the opportunity to share your favorite dog with
+              other canine lovers. canine lovers. You can upload photos and
+              details of your adorable so everyone can see how special he or she
+              is. Share the happiness and love your the happiness and love your
+              dog brings to the world! Explore our selection of breeds and share
+              the joy of having a dog in your life. Oh my Dog welcomes you to
+              this community full of love for dogs!
             </p>
             <div className={style.buttonContainer}>
-                <NavLink to="/home" className={style.navlink}>
-              <button className={style.button}>
-                  Home
-              </button>
-                </NavLink>
-                <NavLink to="/create" className={style.navlink}>
-              <button className={style.button}>
-                  Add your dog
-              </button>
-                </NavLink>
+              <NavLink to="/home" className={style.navlink}>
+                <button className={style.button}>Home</button>
+              </NavLink>
+              <NavLink to="/create" className={style.navlink}>
+                <button className={style.button}>Add your dog</button>
+              </NavLink>
             </div>
           </div>
         </div>
