@@ -55,7 +55,7 @@
 .image{
   width:40%;
   height: 80%;
-  margin-bottom: -4%;
+  margin-bottom: -4em;
 } 
 
 .circleContainer{
@@ -142,7 +142,7 @@
   }
 }
 
-@media screen and (width>=1250px) {
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
 
  
 @font-face {
