@@ -37,6 +37,8 @@ const Form = () => {
 
   const [alertTimeout, setAlertTimeout] = useState(null); // Estado para ocultar la alerta
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth); //Estado para ocultar la Imagen segun el ancho de la pantalla
+
   //HANDLERS
   const changeHandler = (event) => {
     //El mismo estado que estoy por setear se lo doy a Validate tambien, ya que la validacion se realiza mas rapido que el cambio de estado, de esta forma le llega lo mismo a los dos
@@ -84,12 +86,6 @@ const Form = () => {
   const selectHandler = (event) => {
     console.log(event.target.value);
 
-    // const defaultValue = "Select one or more typical temperaments of the breed"
-
-    // if(event.target.name === "temperaments" && event.target.value === defaultValue){
-    //   return setErrors(validate(form));
-    // }
-
     if (
       event.target.value &&
       !form.temperaments.some((temp) => temp.name === event.target.value)
@@ -122,6 +118,12 @@ const Form = () => {
     );
   };
 
+  const updateWindowWidth = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  //USE-EFFECT
+
   useEffect(() => {
     // Ocultar el alerta después de 3 segundos
     if (showAlert) {
@@ -136,6 +138,16 @@ const Form = () => {
       clearTimeout(alertTimeout);
     };
   }, [showAlert]);
+
+  useEffect(() => {
+    // Agregar un listener para actualizar el estado cuando cambie el ancho de la ventana
+    window.addEventListener("resize", updateWindowWidth);
+
+    // Limpieza del listener cuando el componente se desmonte
+    return () => {
+      window.removeEventListener("resize", updateWindowWidth);
+    };
+  }, []);
 
   return (
     <div className={style.container}>
@@ -345,7 +357,10 @@ const Form = () => {
           </button>
         </div>
       </form>
-      <div className={style.imageContainer}>
+      <div
+        className={style.imageContainer}
+        style={{ display: windowWidth <= 768 ? "none" : "flex" }}
+      >
         <img src={formImage} alt="dog" className={style.img} />
       </div>
     </div>
